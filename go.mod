@@ -1,4 +1,4 @@
-module crud-demo
+module orm-gin
 
 go 1.24.4
 
