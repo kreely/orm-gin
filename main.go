@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/kreely/orm-gin/initialisers"
+	"github.com/kreely/orm-gin/controllers"	
 	"github.com/gin-gonic/gin"
 
 )
@@ -15,11 +16,7 @@ func main() {
 
 	r := gin.Default()
 
-	r.GET("/", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "pongo-riffic",
-		})
-	})
+	r.GET("/", controllers.PostsCreate)
 
 	r.Run()
 
