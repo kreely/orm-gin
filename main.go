@@ -16,8 +16,10 @@ func main() {
 
 	r := gin.Default()
 
-	r.GET("/", controllers.PostsCreate)
-
+	r.POST("/recipes", controllers.RecipeCreate)
+	r.GET("/recipes", controllers.RecipeIndex)
+	r.GET("/recipes/:id", controllers.RecipeShow)
+	
 	r.Run()
 
 }

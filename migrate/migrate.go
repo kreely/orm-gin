@@ -1,15 +1,19 @@
 package main
 
 import (
-	"github.com/kreely/org-gin/initialisers"
-	"github.com/kreely/org-gin/models"
+	"github.com/kreely/orm-gin/initialisers"
+	"github.com/kreely/orm-gin/models"
 )
 
 func init() {
-	initialisers.loadEnvVariables() 
-	initialisers.ConnectToDB()
+	initialisers.LoadEnvVariables() 
+	initialisers.ConnectToDB("test.db")
 }
 
 func main() {
-	initialisers.DB.AutoMigrate(&models.Post(&models.Post{})
+	initialisers.DB.Migrator().CreateConstraint(&models.Recipe{}, "fk_recipe_recipe_steps")
+	
+	initialisers.DB.AutoMigrate(&models.RecipeSteps{})	
+	initialisers.DB.AutoMigrate(&models.RecipeIngredient{})
+	initialisers.DB.AutoMigrate(&models.Recipe{})	
 }

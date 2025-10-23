@@ -2,7 +2,11 @@ module github.com/kreely/orm-gin
 
 go 1.24.4
 
-require github.com/joho/godotenv v1.5.1
+require (
+	github.com/joho/godotenv v1.5.1
+	gorm.io/driver/sqlite v1.6.0
+	gorm.io/gorm v1.31.0
+)
 
 require (
 	github.com/bytedance/gopkg v0.1.3 // indirect
@@ -46,6 +50,4 @@ require (
 	golang.org/x/text v0.30.0 // indirect
 	golang.org/x/tools v0.38.0 // indirect
 	google.golang.org/protobuf v1.36.10 // indirect
-	gorm.io/driver/sqlite v1.6.0 // indirect
-	gorm.io/gorm v1.31.0 // indirect
 )
