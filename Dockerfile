@@ -5,12 +5,11 @@ WORKDIR /usr/src/app
 COPY go.mod ./
 RUN go mod download && go mod verify
 COPY . .
-RUN go get github.com/kreely/orm-gin/models
-RUN go get github.com/kreely/orm-gin/controllers
-RUN go get github.com/kreely/orm-gin/migrate
-RUN go get github.com/kreely/orm-gin/initialisers
+RUN go get github.com/kreely/orm-gin
+COPY . .
 
 RUN go run migrate/migrate.go
+COPY . .
 
 RUN go build -v -o /run-app .
 
