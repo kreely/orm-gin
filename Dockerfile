@@ -10,6 +10,8 @@ RUN go get github.com/kreely/orm-gin/controllers
 RUN go get github.com/kreely/orm-gin/migrate
 RUN go get github.com/kreely/orm-gin/initialisers
 
+RUN go run migrate/migrate.go
+
 RUN go build -v -o /run-app .
 
 

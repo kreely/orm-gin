@@ -40,6 +40,10 @@ require (
 	github.com/radovskyb/watcher v1.0.7 // indirect
 	github.com/twitchyliquid64/golang-asm v0.15.1 // indirect
 	github.com/ugorji/go/codec v1.3.0 // indirect
+	github.com/kreely/orm-gin/models v0.1.1
+	github.com/kreely/orm-gin/migrate v0.1.1
+	github.com/kreely/orm-gin/initialisers v0.1.1
+	github.com/kreely/orm-gin/controllers v0.1.1	
 	go.uber.org/mock v0.6.0 // indirect
 	golang.org/x/arch v0.22.0 // indirect
 	golang.org/x/crypto v0.43.0 // indirect
