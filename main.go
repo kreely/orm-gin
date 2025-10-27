@@ -2,7 +2,8 @@ package main
 
 import (
 	"github.com/kreely/orm-gin/initialisers"
-	"github.com/kreely/orm-gin/controllers"	
+	"github.com/kreely/orm-gin/controllers"
+	"github.com/kreely/orm-gin/models"		
 	"github.com/gin-gonic/gin"
 
 )
