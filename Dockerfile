@@ -7,6 +7,8 @@ RUN go mod download && go mod verify
 COPY . .
 RUN go get github.com/kreely/orm-gin
 COPY . .
+RUN go get github.com/kreely/orm-gin/models
+COPY . .
 
 RUN go run migrate/migrate.go
 COPY . .
