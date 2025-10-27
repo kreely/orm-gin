@@ -17,6 +17,7 @@ func main() {
 	r := gin.Default()
 
 	r.POST("/recipes", controllers.RecipeCreate)
+	r.PUT("/recipes/:id", controllers.RecipeUpdate)
 	r.GET("/recipes", controllers.RecipeIndex)
 	r.GET("/recipes/:id", controllers.RecipeShow)
 	
