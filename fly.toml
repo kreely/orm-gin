@@ -4,7 +4,7 @@
 #
 
 app = 'orm-gin'
-primary_region = 'ams'
+primary_region = 'syd'
 
 [build]
 
