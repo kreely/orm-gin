@@ -4,13 +4,12 @@ import (
 	"github.com/kreely/orm-gin/initialisers"
 	"github.com/kreely/orm-gin/controllers"
 	"github.com/gin-gonic/gin"
-	"github.com/kreely/orm-gin/utilities"
 )
 
 func init() {
 	initialisers.LoadEnvVariables()
 	initialisers.ConnectToDB("test.db")
-	utilities.printFiles()
+	printFiles()
 }
 
 func main() {
