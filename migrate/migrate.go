@@ -8,7 +8,7 @@ import (
 
 func init() {
 	initialisers.LoadEnvVariables() 
-	initialisers.ConnectToDB("/data/test.db")
+	initialisers.ConnectToDB("test.db")
 }
 
 func main() {
