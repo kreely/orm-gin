@@ -1,10 +1,10 @@
-# fly.toml app configuration file generated for orm-gin on 2025-10-27T05:08:35Z
+# fly.toml app configuration file generated for orm-gin on 2025-10-28T02:05:41Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
 app = 'orm-gin'
-primary_region = 'syd'
+primary_region = 'ams'
 
 [build]
 
@@ -20,4 +20,4 @@ primary_region = 'syd'
   memory = '1gb'
   cpu_kind = 'shared'
   cpus = 1
-  memory_mb = 1024
+  memory_mb = 256
