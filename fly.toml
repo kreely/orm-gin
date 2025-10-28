@@ -1,4 +1,4 @@
-# fly.toml app configuration file generated for orm-gin on 2025-10-28T02:05:41Z
+# fly.toml app configuration file generated for orm-gin on 2025-10-28T23:40:44Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
@@ -9,8 +9,8 @@ primary_region = 'syd'
 [build]
 
 [http_service]
-  internal_port = 80
-  force_https = false
+  internal_port = 8080
+  force_https = true
   auto_stop_machines = 'stop'
   auto_start_machines = true
   min_machines_running = 0
@@ -20,8 +20,3 @@ primary_region = 'syd'
   cpu_kind = 'shared'
   cpus = 1
   memory_mb = 256
-
-[mounts]
-  source = "orm_gin"
-  destination = "/data"
-
