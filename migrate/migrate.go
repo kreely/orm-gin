@@ -17,7 +17,7 @@ func main() {
 	log.Println("About to migrate...")
 	err := initialisers.DB.Migrator().CreateConstraint(&models.Recipe{}, "fk_recipe_recipe_steps")
 	if err != nil {
-		log.Fatal("Unable to setup constraints!!!")
+		log.Fatal("Unable to setup constraints!!!", err)
 	}
 	
 	initialisers.DB.AutoMigrate(&models.RecipeStep{})	
