@@ -14,4 +14,5 @@ func ConnectToDB(dbFileName string) {
 	if err != nil {
 		log.Fatal("Could not open DB " + dbFileName)
 	}
+
 }
