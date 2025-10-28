@@ -13,7 +13,7 @@ COPY . .
 RUN go run migrate/migrate.go
 COPY . .
 
-COPY test.db /data
+# COPY test.db /data
 
 RUN go build -v -o /run-app .
 
